@@ -32,6 +32,7 @@
         position: fixed;
         background: transparent;
         width: 100vw;
+        z-index: 5;
         .menu{
             display: flex;
             list-style: none;
