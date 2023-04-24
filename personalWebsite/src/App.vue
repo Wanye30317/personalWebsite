@@ -1,9 +1,11 @@
 <script setup>
     import Loading from '@/components/Loading.vue'
+    import Header from '@/components/Header.vue'
 </script>
 
 <template>
     <Loading/>
+    <Header/>
 </template>
 
 <style lang="scss">

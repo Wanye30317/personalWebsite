@@ -35,6 +35,7 @@
         height: 100vh;
         width: 100vw;
         background: #000;
+        z-index: 10;
         .load{
             font-family: 'Sigmar', cursive;
             font-size: 50px;
@@ -44,7 +45,6 @@
         @keyframes text{
             50%{color:#000}
         }
-
         .circle{
             position: absolute;
             width: 400px;
@@ -69,5 +69,4 @@
             box-shadow:  0 0 5px rgba(255,255,255,.3);
         }
     }
-
 </style>
