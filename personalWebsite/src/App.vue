@@ -1,9 +1,9 @@
 <script setup>
-
+    import Loading from '@/components/Loading.vue'
 </script>
 
 <template>
-    <h1>hi</h1>
+    <Loading/>
 </template>
 
 <style lang="scss">
