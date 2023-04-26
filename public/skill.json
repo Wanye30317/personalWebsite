@@ -1,0 +1,8 @@
+[
+    {
+        "frontend":["HTML 語意化標籤的使用","CSS、SCSS製作RWD響應式網頁","Bootstrap製作RWD響應式網頁","Tailwind製作RWD響應式網頁","JavaScript ES6語法、非同步處理","能手寫JSON、串接API","了解React.js hooks的使用 & component life cycle","了解Vue.js 基本語法使用 & life cycle"],
+        "backend":["RESTful設計網頁路徑","後端程式撰寫網頁","MySQL資料庫建置和資料操作","MVC架構開發(Ruby on Rails、Node.js)"],
+        "other":["有Photoshop 基本去背修圖合成能力","使用威力導演剪接影片能力","Git指令操作、使用Git多人開發經驗","spline3D建模","three.js3D建模"]
+    }
+]
+    

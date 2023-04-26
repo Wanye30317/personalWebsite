@@ -10,6 +10,7 @@
     const iframe = ref()
 
     onMounted(()=>{
+        
         gsap.to(iframe.value,{
             x:500,
             scrollTrigger:{
@@ -57,11 +58,13 @@
 
 <style lang="scss" scoped>
     @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
+    $background: #68bac0;
+
     section{
         position: relative;
         height: 100vh;
         width: 100vw;
-        background: #708aff;
+        background: $background;
         iframe{
             position: absolute;
             top:0;
@@ -73,7 +76,7 @@
             position: absolute;
             bottom: 20px;
             right: 0px;
-            background:#708aff;
+            background:$background;
             width: 170px;
             height: 40px;
             z-index: 2;
@@ -134,7 +137,7 @@
                 overflow:hidden;
                 list-style-type:none;
                 font-size: 50px;
-                line-height: 70px;
+                line-height: 74px;
                 font-weight: 700;
                 .txt {
                     position: relative;
@@ -152,7 +155,7 @@
                         top:0;
                         height:100%;
                         width: 100%;
-                        background: #708aff;
+                        background: $background;
                         border-left: 2px solid #000;
                         animation: typing 2s steps(5) infinite;
                     }
@@ -161,9 +164,9 @@
                         100%{left: 0;}
                     }
                 }
-                .c1{color:#f57171;}
-                .c2{color:#ffbb00;}
-                .c3{color:#6fddce;}
+                .c1{color:#fff;}
+                .c2{color:#000;}
+                .c3{color:#8c33c0;}
             }
         }
     }

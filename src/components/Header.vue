@@ -58,6 +58,7 @@
         width: 100vw;
         z-index: 5;
         padding: 30px 0;
+        background: rgba(#fff,.3);
         border-bottom: 2px solid rgba(255,255,255,.1);
         .menu{
             display: flex;
@@ -71,7 +72,7 @@
                 width: 30px;
                 height: 30px;
                 scale: 2;
-                transition: 1s;
+                transition: .5s;
                 &:hover{
                     scale: 3;
                 }

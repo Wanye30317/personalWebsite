@@ -2,7 +2,7 @@
     import Loading from '@/components/Loading.vue'
     import Header from '@/components/Header.vue'
     import Banner from '@/components/Banner.vue'
-    import Skill from '@/components/Skill.vue'
+    import Skill from '@/components/Skill/Skill.vue'
     import { gsap } from 'gsap'
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
     import { ref,onMounted,provide } from 'vue';
@@ -20,9 +20,10 @@
     provide("header",header)
 
     onMounted(()=>{
-        const arr = [banner.value,skill.value]
-        gsap.to(arr,{
-            xPercent: -100 * (arr.length-1) ,
+        const sections = [banner.value,skill.value]
+
+        gsap.to(sections,{
+            xPercent: -100 * (sections.length-1) ,
             duration:1,
             scrollTrigger: {
                 trigger: container.value, 
