@@ -30,12 +30,25 @@
     <header ref="header">
         <nav>
             <ul class="menu">
-                <li><a href="#">1</a></li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
+                <li>
+                    <a class="github" href="https://github.com/wayne035">
+                        <img  src="/images/github.webp" alt="github"/>
+                    </a>
+                </li>
+                <li>
+                    <a class="gmail" href="mailto:QWE24367705@gmail.com">
+                        <img  src="/images/Gmail.webp" alt="gmail"/>
+                    </a>
+                </li>
+                <li>
+                    <a class="phone" href="tel:+886-965005088">
+                        <img  src="/images/phone.webp" alt="phone"/>
+                    </a>
+                </li>
             </ul>
         </nav>
         <span ref="span"></span>
+        <a class="my-element" href="c"></a>
     </header>
 </template>
 
@@ -51,9 +64,17 @@
             justify-content: center;
             list-style: none;
             a{
-                color: #000;
                 text-decoration: none;
-                margin: 0 20px;
+                margin: 0 40px;
+            }
+            img{
+                width: 30px;
+                height: 30px;
+                scale: 2;
+                transition: 1s;
+                &:hover{
+                    scale: 3;
+                }
             }
         }
         span{

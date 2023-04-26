@@ -43,7 +43,15 @@
         ></iframe>
         <p ref="hello" class="hello">hello!!</p>
         <p ref="text" class="text">I'm Wayne</p>
-        
+        <div class="container">
+            <div class="static-text">朝著</div>
+            <ul class="text-wrapper">
+                <li class="txt c1">前端工程師</li>
+                <li class="txt c2">後端工程師</li>
+                <li class="txt c3">全端工程師</li>
+            </ul>
+            <div class="static-text">前進!!</div>
+        </div>
     </section>
 </template>
 
@@ -95,7 +103,7 @@
             font-weight: 900;
             font-family: 'ZCOOL KuaiLe', sans-serif;
             top:55%;
-            left:60px;
+            left:80px;
             font-size: 150px;
             color: #fff;
             &:after{
@@ -111,5 +119,54 @@
                 z-index: 1;
             }
         }
+        .container{
+            position: relative;
+            display:flex;
+            top:80%;
+            left: 80px;
+            .static-text{
+                font-size: 50px;
+                font-weight: 700;
+                height: 60px;
+            }
+            .text-wrapper{
+                height: 60px;
+                overflow:hidden;
+                list-style-type:none;
+                font-size: 50px;
+                line-height: 70px;
+                font-weight: 700;
+                .txt {
+                    position: relative;
+                    top:0;
+                    height: 60px;
+                    white-space: nowrap;
+                    animation: text 6s steps(3) infinite;
+                    @keyframes text {
+                        100%{top:-180px;}
+                    }
+                    &::after{
+                        content: "";
+                        position:absolute;
+                        left:0;
+                        top:0;
+                        height:100%;
+                        width: 100%;
+                        background: #708aff;
+                        border-left: 2px solid #000;
+                        animation: typing 2s steps(5) infinite;
+                    }
+                    @keyframes typing {
+                        30%,70%{left: 100%;}
+                        100%{left: 0;}
+                    }
+                }
+                .c1{color:#f57171;}
+                .c2{color:#ffbb00;}
+                .c3{color:#6fddce;}
+            }
+        }
     }
+
+    
 </style>

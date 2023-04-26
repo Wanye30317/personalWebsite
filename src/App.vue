@@ -34,7 +34,7 @@
 </script>
 
 <template>
-    <Loading/>
+    <!-- <Loading/> -->
     <Header/>
     <div ref="wrap" class="wrap">
         <div ref="container" class="container">
