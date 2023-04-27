@@ -2,11 +2,9 @@
     import SkillItem from './SkillItem.vue';
     import {gsap} from 'gsap'
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    import {ref,onMounted,inject} from 'vue'
+    import {ref,onMounted} from 'vue'
     gsap.registerPlugin(ScrollTrigger);
 
-    const skill = inject("skill")
-    const h2 = ref()
     let frontend = ref([])
     let backend = ref([])
     let other = ref([])
@@ -25,37 +23,13 @@
         }
         getdata()
 
-        let scrollTween = gsap.to(skill.value,{
-            xPercent: -100 ,
-            duration:1,
-            scrollTrigger: {
-                trigger: skill.value,
-                start: 'top top',
-                pin: true,
-                scrub: 3,
-                //markers:true,
-            }
-        })
-
-        gsap.from(h2.value,{
-            y:-200,
-            scrollTrigger:{
-                trigger: skill.value,
-                containerAnimation: scrollTween,
-                start: 'top 80%',
-                end:'top',
-                scrub:3,
-                //markers:true,
-            }
-        })
-
     })
 </script>
 
 <template>
-    <section ref="skill">
-        <h2 ref="h2">技能</h2>
-        <article ref="article">
+    <section>
+        <h2>技能</h2>
+        <article>
             <SkillItem :data= "frontend" txt="前端"/>
             <SkillItem :data= "backend" txt="後端" />
             <SkillItem :data= "other" txt="其他" />
@@ -63,7 +37,6 @@
         <iframe src="https://my.spline.design/htmlcssjs-837cc636709448261f71a33c3f41bc92/"
                 frameborder="0"
                 title="3Dscenes"
-                ref="iframe"
         ></iframe>
         <div class="cover"></div>
     </section>
@@ -76,7 +49,7 @@
         height: 100vh;
         width: 100vw;
         background: $background;
-        z-index: 2;
+        z-index: 3;
         h2{
             position: absolute;
             font-size: 120px;
@@ -105,8 +78,11 @@
             z-index: 1;
         }
         iframe{
-            height: 100%;
-            width: 100%;
+            position: absolute;
+            top:0;
+            left:0;
+            height: 100vh;
+            width: 100vw;
         }
         .cover{
                 position: absolute;

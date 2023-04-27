@@ -1,12 +1,10 @@
 <script setup>
     import { gsap } from 'gsap'
-    import { ref,onMounted } from 'vue';
-
-    const bg = ref();
+    import { onMounted } from 'vue';
 
     onMounted(()=>{
         const load = setTimeout(()=>{
-            gsap.to(bg.value,{
+            gsap.to(".bg",{
                 duration:2,
                 opacity:0,
                 display:'none',
@@ -17,7 +15,7 @@
 </script>
 
 <template>
-    <div ref="bg" class="bg" @load="load" >
+    <div class="bg" @load="load" >
         <span class="load">Loading...</span>
         <div class="circle"></div>
     </div>

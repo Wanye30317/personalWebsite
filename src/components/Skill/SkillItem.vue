@@ -27,10 +27,6 @@
         padding:10px;
         transform-style: preserve-3d;
         transition: .3s ease;
-        cursor:pointer;
-        &:hover{
-            transform: rotateY(180deg);
-        }
         .front,.back{
             color:#fff;
             position: absolute;

@@ -1,23 +1,20 @@
 <script setup>
     import { gsap } from 'gsap'
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    import { ref,onMounted,inject } from 'vue';
+    import { onMounted } from 'vue';
     gsap.registerPlugin(ScrollTrigger);
 
-    const span = ref()
-    const header = inject("header")
-
     onMounted(()=>{
-        gsap.to(span.value,{
+        gsap.to(".line",{
             duration:2,
             x:'100vw',
             repeat:-1,
         })
 
-        gsap.to(header.value,{
+        gsap.to("header",{
             top:'-150px',
             scrollTrigger:{
-                trigger:header.value,
+                trigger:"header",
                 start:'top',
                 scrub:1,
             }
@@ -27,7 +24,7 @@
 </script>
 
 <template>
-    <header ref="header">
+    <header>
         <nav>
             <ul class="menu">
                 <li>
@@ -47,8 +44,7 @@
                 </li>
             </ul>
         </nav>
-        <span ref="span"></span>
-        <a class="my-element" href="c"></a>
+        <span class="line"></span>
     </header>
 </template>
 

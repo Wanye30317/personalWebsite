@@ -2,36 +2,18 @@
     import Loading from '@/components/Loading.vue'
     import Header from '@/components/Header.vue'
     import Banner from '@/components/Banner.vue'
+    import AboutMe from '@/components/AboutMe.vue'
     import Skill from '@/components/Skill/Skill.vue'
+    import scrollAnimation from '@/components/animation'
     import { gsap } from 'gsap'
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    import { ref,onMounted,provide } from 'vue';
+    import { onMounted } from 'vue';
     gsap.registerPlugin(ScrollTrigger);
 
-    const container = ref()
-
-    const banner = ref()
-    provide("banner",banner)
-
-    const skill = ref()
-    provide("skill",skill)
-
-    const header = ref()
-    provide("header",header)
-
     onMounted(()=>{
-        const sections = [banner.value,skill.value]
-
-        gsap.to(sections,{
-            xPercent: -100 * (sections.length-1) ,
-            duration:1,
-            scrollTrigger: {
-                trigger: container.value, 
-                pin: true,
-                scrub: 3,
-            }
-        })
+        scrollAnimation()
     })
+    
 </script>
 
 <template>
@@ -39,8 +21,9 @@
     <Header/>
     <div ref="wrap" class="wrap">
         <div ref="container" class="container">
-            <Banner/>
-            <Skill/>
+            <Banner class="section"/>
+            <AboutMe class="section"/>
+            <Skill class="section"/>
         </div>
     </div>
 
@@ -54,5 +37,6 @@
     .container{
         display: flex;
         width:300vw;
+        flex-wrap: nowrap;
     }
 </style>

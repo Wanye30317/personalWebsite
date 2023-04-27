@@ -1,32 +1,28 @@
 <script setup>
     import {gsap} from 'gsap'
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
-    import {ref,onMounted,inject} from 'vue'
+    import {onMounted} from 'vue'
     gsap.registerPlugin(ScrollTrigger);
-
-    const banner = inject("banner")
-    const hello = ref()
-    const text = ref()
-    const iframe = ref()
 
     onMounted(()=>{
         
-        gsap.to(iframe.value,{
-            x:500,
+        gsap.to('.banner',{
+            x:1000,
             scrollTrigger:{
-                trigger: iframe.value,
+                trigger: '.banner',
                 start: 'top top',
                 scrub:1,
                 //markers:true,
             }
         })
 
-        gsap.to(hello.value,{
+        gsap.to('.hello',{
             x:-500,
-            duration:3,
+            opacity:0,
             scrollTrigger:{
-                trigger: hello.value,
-                start: 'top 20%',
+                trigger: '.hello',
+                start: 'top 30%',
+                end:'end 20%',
                 scrub:1,
                 //markers:true,
             }
@@ -35,15 +31,15 @@
 </script>
 
 <template>
-    <section ref="banner">
+    <section>
         <div class="cover"></div>
         <iframe src="https://my.spline.design/untitled-3ae60390e7b0d49d16c3aa6172b4e045/" 
                 frameborder="0"
                 title="3Dscenes"
-                ref="iframe" 
+                class="banner"
         ></iframe>
-        <p ref="hello" class="hello">hello!!</p>
-        <p ref="text" class="text">I'm Wayne</p>
+        <p class="hello">hello!!</p>
+        <p class="text">I'm Wayne</p>
         <div class="container">
             <div class="static-text">朝著</div>
             <ul class="text-wrapper">
