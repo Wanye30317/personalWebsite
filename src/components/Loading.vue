@@ -10,7 +10,7 @@
                 display:'none',
                 scale:3,
             })
-        },3000)
+        },4000)
     })
 </script>
 

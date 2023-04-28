@@ -2,19 +2,10 @@
     import {gsap} from 'gsap'
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
     import {onMounted} from 'vue'
+    
     gsap.registerPlugin(ScrollTrigger);
 
     onMounted(()=>{
-        
-        gsap.to('.banner',{
-            x:1000,
-            scrollTrigger:{
-                trigger: '.banner',
-                start: 'top top',
-                scrub:1,
-                //markers:true,
-            }
-        })
 
         gsap.to('.hello',{
             x:-500,
@@ -27,6 +18,7 @@
                 //markers:true,
             }
         })
+
     })
 </script>
 

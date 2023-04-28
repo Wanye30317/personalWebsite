@@ -23,12 +23,21 @@
         }
         getdata()
 
+        gsap.from('.skill',{
+            opacity:0,
+            scrollTrigger:{
+                trigger:'.skill',
+                start:'250% top',
+                scrub:1,
+                markers:true,
+            }
+        })
     })
 </script>
 
 <template>
     <section>
-        <h2>技能</h2>
+        <h2 class="skill">技能</h2>
         <article>
             <SkillItem :data= "frontend" txt="前端"/>
             <SkillItem :data= "backend" txt="後端" />
@@ -87,9 +96,9 @@
         .cover{
                 position: absolute;
                 bottom:20px;
-                right:10px;
+                right:0px;
                 background:$background;
-                width: 150px;
+                width: 180px;
                 height: 37px;
                 z-index: 2;
         }
