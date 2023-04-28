@@ -16,7 +16,6 @@
 <style lang="scss" scoped>
     .card{
         position: relative;
-        border: 2px solid #ffd104;
         border-radius: 20px;
         width: 350px;
         height: 450px;
@@ -27,6 +26,9 @@
         padding:10px;
         transform-style: preserve-3d;
         transition: .3s ease;
+        cursor: pointer;
+        &:hover .front{transform: rotateY(180deg);}
+        &:hover .back{transform: rotateY(0deg);}
         .front,.back{
             color:#fff;
             position: absolute;
@@ -51,9 +53,14 @@
         .front{
             background: url('/images/card.webp') center center;
             background-size: cover;
+            border: 2px solid #ffd104;
+            transform: rotateY(0deg);
+            transition: 1s;
         }
         .back {
             background: #e4cc43;
+            border: 2px solid #ffd104;
+            transition: 1s;
             transform: rotateY(180deg);
             p{
                 margin: 10px 0;

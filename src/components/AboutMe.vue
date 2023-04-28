@@ -25,7 +25,7 @@
                 start:'20% top',
                 end:'30%',
                 scrub:1,
-                markers:true,
+                //markers:true,
             }
         })
     })

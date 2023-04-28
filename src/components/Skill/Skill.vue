@@ -27,11 +27,24 @@
             opacity:0,
             scrollTrigger:{
                 trigger:'.skill',
-                start:'250% top',
+                start:'250%',
+                end:'280%',
+                scrub:1,
+                //markers:true,
+            }
+        })
+
+        gsap.from('article',{
+            top:'-50%',
+            scrollTrigger:{
+                trigger:'article',
+                start:'200%',
+                end:'220%',
                 scrub:1,
                 markers:true,
             }
         })
+
     })
 </script>
 
@@ -46,6 +59,7 @@
         <iframe src="https://my.spline.design/htmlcssjs-837cc636709448261f71a33c3f41bc92/"
                 frameborder="0"
                 title="3Dscenes"
+                class=""
         ></iframe>
         <div class="cover"></div>
     </section>
