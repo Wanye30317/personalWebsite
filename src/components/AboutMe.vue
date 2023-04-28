@@ -6,11 +6,24 @@
     gsap.registerPlugin(ScrollTrigger);
 
     onMounted(()=>{
+
         gsap.from('.aboutMe',{
             opacity:0,
             scrollTrigger:{
                 trigger:'.aboutMe',
-                start:'100% top',
+                start:'80%',
+                end:'130%',
+                scrub:1,
+                //markers:true,
+            }
+        })
+
+        gsap.from('.aboutbanner',{
+            x:400,
+            scrollTrigger:{
+                trigger:'.aboutbanner',
+                start:'20% top',
+                end:'30%',
                 scrub:1,
                 markers:true,
             }
@@ -25,6 +38,7 @@
         <iframe src="https://my.spline.design/untitled-b4c3a15f3259adb9725728a4edbadbb2/" 
                 frameborder="0"
                 title="3Dscenes"
+                class="aboutbanner"
         ></iframe>
         <div class="cover"></div>
     </section> 
