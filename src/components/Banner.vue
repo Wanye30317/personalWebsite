@@ -1,5 +1,5 @@
 <script setup>
-    import {gsap} from 'gsap'
+    import { gsap } from 'gsap'
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
     import {onMounted} from 'vue'
     
@@ -13,7 +13,18 @@
             scrollTrigger:{
                 trigger: '.hello',
                 start: 'top 30%',
-                end:'end 20%',
+                end:'50%',
+                scrub:1,
+                //markers:true,
+            }
+        })
+
+        gsap.to('.banner',{
+            x:500,
+            scrollTrigger:{
+                trigger: '.banner',
+                start: '10%',
+                end:"30%",
                 scrub:1,
                 //markers:true,
             }
