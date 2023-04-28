@@ -4,15 +4,28 @@
     import {onMounted} from 'vue'
     gsap.registerPlugin(ScrollTrigger);
     onMounted(()=>{
+
         gsap.from('.portfolio',{
             opacity:0,
             scrollTrigger:{
                 trigger:'.portfolio',
-                start:'400% top',
+                start:'320%',
+                end:'400%',
                 scrub:1,
-                markers:true,
+                //markers:true,
             }
         })
+
+        gsap.from('.computer',{
+            x:700,
+            scrollTrigger:{
+                trigger:'.portfolio',
+                start:'400%',
+                scrub:1,
+                //markers:true,
+            }
+        })
+
     })
 </script>
 
@@ -22,9 +35,11 @@
         <iframe src="https://my.spline.design/untitled-7c6ed4e4c6a79857b1e56d1a96b00f74/" 
                 frameborder="0"
                 title="3Dscenes"
+                class="computer"
         ></iframe>
         <div class="cover"></div>
-    </section> 
+    </section>
+
 </template>
 
 <style lang="scss" scoped>

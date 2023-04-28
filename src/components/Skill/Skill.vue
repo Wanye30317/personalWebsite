@@ -41,7 +41,7 @@
                 start:'200%',
                 end:'220%',
                 scrub:1,
-                markers:true,
+                //markers:true,
             }
         })
 
