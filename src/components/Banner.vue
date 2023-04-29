@@ -56,7 +56,6 @@
 </template>
 
 <style lang="scss" scoped>
-    @import url('https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&display=swap');
     $background: #68bac0;
 
     section{

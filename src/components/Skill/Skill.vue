@@ -12,7 +12,7 @@
     onMounted(()=>{
         async function getdata(){
             try{
-                let json = await fetch('/skill.json')
+                let json = await fetch('./skill.json')
                 let db = await json.json()
                 frontend.value = db[0]['frontend']
                 backend.value = db[0]['backend']

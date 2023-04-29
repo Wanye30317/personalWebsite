@@ -29,7 +29,7 @@
 </script>
 
 <template>
-    <!-- <Loading/> -->
+    <Loading/>
     <Header/>
     <div ref="wrap" class="wrap">
         <div class="container">
@@ -39,7 +39,6 @@
             <Portfolio class="section"/>
         </div>
     </div>
-
 </template>
 
 <style lang="scss" scoped>

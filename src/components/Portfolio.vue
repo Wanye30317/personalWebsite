@@ -1,4 +1,5 @@
 <script setup>
+    import Footer from './Footer.vue'
     import {gsap} from 'gsap'
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
     import {onMounted} from 'vue'
@@ -38,8 +39,8 @@
                 class="computer"
         ></iframe>
         <div class="cover"></div>
+        <Footer/>
     </section>
-
 </template>
 
 <style lang="scss" scoped>
