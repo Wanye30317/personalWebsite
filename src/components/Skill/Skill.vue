@@ -24,22 +24,22 @@
         getdata()
 
         gsap.from('.skill',{
-            opacity:0,
+            opacity:0, duration:3,
             scrollTrigger:{
                 trigger:'.skill',
-                start:'250%',
-                end:'280%',
+                start:'2800px',
+                end:'3300px',
                 scrub:1,
                 //markers:true,
             }
         })
 
         gsap.from('article',{
-            top:'-50%',
+            top:'-50%',duration:3,
             scrollTrigger:{
                 trigger:'article',
-                start:'200%',
-                end:'220%',
+                start:'3000px',
+                end:'3400px',
                 scrub:1,
                 //markers:true,
             }

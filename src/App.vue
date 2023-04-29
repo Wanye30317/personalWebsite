@@ -19,8 +19,8 @@
             duration:2,
             scrollTrigger: {
                 trigger: '.container', 
-                snap: 1 / (sections.length - 1),
-                scrub:2,
+                end:'+=5000',
+                scrub:3,
                 pin: true,
                 //markers:true,
             }

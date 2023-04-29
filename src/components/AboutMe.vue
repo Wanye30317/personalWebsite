@@ -8,25 +8,25 @@
     onMounted(()=>{
 
         gsap.from('.aboutMe',{
-            opacity:0,
+            opacity:0, direction:3,
             scrollTrigger:{
                 trigger:'.aboutMe',
-                start:'80%',
-                end:'130%',
+                start:'400%',
+                end:'650%',
                 scrub:1,
                 //markers:true,
             }
         })
 
         gsap.from('.aboutbanner',{
-            x:400,
+            x:600,direction:3,
             scrollTrigger:{
                 trigger:'.aboutbanner',
-                start:'20% top',
-                end:'30%',
+                start:'30% top',
+                end:'130%',
                 scrub:1,
                 //markers:true,
-            }
+            } 
         })
     })
 

@@ -4,24 +4,35 @@
     import { ScrollTrigger } from 'gsap/ScrollTrigger';
     import {onMounted} from 'vue'
     gsap.registerPlugin(ScrollTrigger);
+
     onMounted(()=>{
 
         gsap.from('.portfolio',{
-            opacity:0,
+            opacity:0,duration:3,
             scrollTrigger:{
                 trigger:'.portfolio',
-                start:'320%',
-                end:'400%',
+                start:'4300px',
+                end:'4800px',
                 scrub:1,
                 //markers:true,
             }
         })
 
         gsap.from('.computer',{
-            x:700,
+            x:700,duration:3,
             scrollTrigger:{
                 trigger:'.portfolio',
-                start:'400%',
+                start:'4700px',
+                scrub:1,
+                //markers:true,
+            }
+        })
+
+        gsap.from('.footer',{
+            opacity:0,duration:3,
+            scrollTrigger:{
+                trigger:'.footer',
+                start:'4000px',
                 scrub:1,
                 //markers:true,
             }
@@ -39,7 +50,7 @@
                 class="computer"
         ></iframe>
         <div class="cover"></div>
-        <Footer/>
+        <Footer class="footer"/>
     </section>
 </template>
 

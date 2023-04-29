@@ -22,5 +22,6 @@
         font-family: 'Sigmar', cursive;
         font-size: 20px;
         z-index: 99;
+        outline: 2px solid #000;
     }
 </style>
