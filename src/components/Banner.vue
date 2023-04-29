@@ -125,6 +125,7 @@
             display:flex;
             top:80%;
             left: 80px;
+            font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
             .static-text{
                 font-size: 50px;
                 font-weight: 700;

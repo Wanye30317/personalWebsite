@@ -57,6 +57,7 @@
             top: 20px;
             left: 50px;
             color: #fff;
+            font-family: "Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
             &::after{
                 position: absolute;
                 content: '作品集';

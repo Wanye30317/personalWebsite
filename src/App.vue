@@ -29,7 +29,7 @@
 </script>
 
 <template>
-    <Loading/>
+    <!-- <Loading/> -->
     <Header/>
     <div ref="wrap" class="wrap">
         <div class="container">
