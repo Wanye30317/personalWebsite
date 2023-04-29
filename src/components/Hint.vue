@@ -18,6 +18,7 @@
                 <li>1.按住滾輪後拖動滑鼠可以拖動3D物件</li>
                 <li>2.對3D物件按住左鍵可以定點拖動</li>
                 <li>3.點擊某些3D物件會觸發互動效果</li>
+                <li>4.建議觀看尺寸1024*768以上</li>
             </ul>
         </div>
     </div>
@@ -36,7 +37,7 @@
         .prompt-text{
             position: absolute;
             width: 500px;
-            height: 400px;
+            height: 500px;
             background-color: #fff;
             border-radius: 50px;
             font-family:"Helvetica", "Arial","LiHei Pro","黑體-繁","微軟正黑體", sans-serif;
