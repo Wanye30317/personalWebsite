@@ -10,6 +10,9 @@
                 display:'none',
                 scale:3,
             })
+
+            window.scrollTo(0,top)
+
         },4000)
     })
 </script>

@@ -41,7 +41,7 @@
                 class="banner"
         ></iframe>
         <p class="hello">hello!!</p>
-        <p class="text">I'm Wayne</p>
+        <h1 class="text">I'm Wayne</h1>
         <div class="container">
             <div class="static-text">朝著</div>
             <ul class="text-wrapper">
