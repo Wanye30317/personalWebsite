@@ -1,5 +1,6 @@
 <script setup>
     import Loading from '@/components/Loading.vue'
+    import Hint from '@/components/Hint.vue'
     import Header from '@/components/Header.vue'
     import Banner from '@/components/Banner.vue'
     import AboutMe from '@/components/AboutMe.vue'
@@ -12,7 +13,7 @@
 
     let banner = ref('')
 
-    const scrollToTop =()=>{
+    const scrollToTop =() =>{
         let el = banner
         let top = el.offestTop
         window.scrollTo(0,top)
@@ -38,6 +39,7 @@
 
 <template>
     <Loading/>
+    <Hint/>
     <Header/>
     <div class="wrap">
         <div class="container">
@@ -48,6 +50,7 @@
             <a class="back" @click="scrollToTop">回首頁</a>
         </div>
     </div>
+    
 </template>
 
 <style lang="scss" scoped>
@@ -67,7 +70,7 @@
             background: #000;
             color: #fff;
             position: fixed;
-            z-index: 10;
+            z-index: 8;
             cursor: pointer;
             text-align: center;
             line-height: 80px;
